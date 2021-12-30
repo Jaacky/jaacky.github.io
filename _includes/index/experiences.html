@@ -10,16 +10,21 @@
                 <h2>{{ experience.employer }}</h2>
                 <h4>{{ experience.position }}</h4>
                 <h4>{{ experience.time }}</h4>
-                <ul class="fa-ul">
-                    {% if experience.tech %}
-                        <li>
-                            <i class="fa-li fa fa-code" aria-hidden="true"></i><p><span class="tech-used">Technologies used:</span> {{ experience.tech }}</p>
-                        </li>
-                    {% endif %}
-                    {% for blurb in experience.description %}
-                        <li><i class="fa-li fa fa-angle-right" aria-hidden="true"></i><p>{{ blurb }}</p></li>
-                    {% endfor %}
-                </ul>
+                <div class="more-details-section">
+                    <button class="more-details-button">More details</button>
+                    <div class="more-details-container">
+                        <ul class="fa-ul">
+                            {% if experience.tech %}
+                                <li>
+                                    <i class="fa-li fa fa-code" aria-hidden="true"></i><p><span class="tech-used">Technologies used:</span> {{ experience.tech }}</p>
+                                </li>
+                            {% endif %}
+                            {% for blurb in experience.description %}
+                                <li><i class="fa-li fa fa-angle-right" aria-hidden="true"></i><p>{{ blurb }}</p></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
             </div>
         {% endfor %}
     </div>

@@ -86,4 +86,17 @@ $(document).ready(function () {
       }
     });
   });
+
+  /*
+        More details handler
+    */
+  $(".more-details-button").on("click", function () {
+    const container = $(".more-details-container");
+
+    if (container.hasClass("active")) {
+      container.removeClass("active");
+    } else {
+      container.addClass("active");
+    }
+  });
 });

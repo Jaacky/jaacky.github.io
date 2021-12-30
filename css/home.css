@@ -322,6 +322,23 @@ p {
     font-family: Enriqueta;
 }
 
+.more-details-section {
+    text-align: left;
+}
+
+.more-details-button {
+    background-color: hsl(0, 0%, 88%);
+    padding: 4px;
+}
+
+.more-details-container {
+    display: none;
+}
+
+.more-details-container.active {
+    display: block;
+}
+
 @media (min-width: 768px) {
     #landing {
         height: 100vh;

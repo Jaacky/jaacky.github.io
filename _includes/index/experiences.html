@@ -11,8 +11,8 @@
                 <h4>{{ experience.position }}</h4>
                 <h4>{{ experience.time }}</h4>
                 <div class="more-details-section">
-                    <button class="more-details-button">More details</button>
-                    <div class="more-details-container">
+                    <button class="more-details-button" data-id="{{experience.id}}">More details</button>
+                    <div class="more-details-container" id="{{experience.id}}">
                         <ul class="fa-ul">
                             {% if experience.tech %}
                                 <li>

@@ -90,8 +90,12 @@ $(document).ready(function () {
   /*
         More details handler
     */
-  $(".more-details-button").on("click", function () {
-    const container = $(".more-details-container");
+  $(".more-details-button").on("click", function (event) {
+    const button = $(event.currentTarget);
+    const id = button.data("id");
+
+    const targetSelector = `#${id}.more-details-container`
+    const container = $(targetSelector);
 
     if (container.hasClass("active")) {
       container.removeClass("active");

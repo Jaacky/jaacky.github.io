@@ -327,8 +327,18 @@ p {
 }
 
 .more-details-button {
-    background-color: hsl(0, 0%, 88%);
-    padding: 4px;
+    background: none;
+    border: none;
+    padding: 0;
+    color: steelblue;
+}
+
+.fa-caret-down, .fa-caret-right {
+    display: none;
+}
+
+.fa-caret-down.active , .fa-caret-right.active {
+    display: inline-block;
 }
 
 .more-details-container {

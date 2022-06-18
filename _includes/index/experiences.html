@@ -11,7 +11,11 @@
                 <h4>{{ experience.position }}</h4>
                 <h4>{{ experience.time }}</h4>
                 <div class="more-details-section">
-                    <button class="more-details-button" data-id="{{experience.id}}">More details</button>
+                    <button class="more-details-button" data-id="{{experience.id}}">
+                        <i class="fa fa-caret-right active" aria-hidden="true"></i>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        Details
+                    </button>
                     <div class="more-details-container" id="{{experience.id}}">
                         <ul class="fa-ul">
                             {% if experience.tech %}

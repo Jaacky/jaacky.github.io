@@ -86,4 +86,29 @@ $(document).ready(function () {
       }
     });
   });
+
+  const caretRightSelector = "i.fa-caret-right"
+  const caretDownSelector = "i.fa-caret-down"
+  /*
+        More details handler
+    */
+  $(".more-details-button").on("click", function (event) {
+    const button = $(event.currentTarget);
+    const id = button.data("id");
+
+    console.log(button);
+
+    const targetSelector = `#${id}.more-details-container`
+    const container = $(targetSelector);
+
+    if (container.hasClass("active")) {
+      container.removeClass("active");
+      button.find(caretRightSelector).addClass("active");
+      button.find(caretDownSelector).removeClass("active");
+    } else {
+      container.addClass("active");
+      button.find(caretRightSelector).removeClass("active");
+      button.find(caretDownSelector).addClass("active");
+    }
+  });
 });

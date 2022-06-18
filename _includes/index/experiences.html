@@ -10,16 +10,27 @@
                 <h2>{{ experience.employer }}</h2>
                 <h4>{{ experience.position }}</h4>
                 <h4>{{ experience.time }}</h4>
-                <ul class="fa-ul">
-                    {% if experience.tech %}
-                        <li>
-                            <i class="fa-li fa fa-code" aria-hidden="true"></i><p><span class="tech-used">Technologies used:</span> {{ experience.tech }}</p>
-                        </li>
-                    {% endif %}
-                    {% for blurb in experience.description %}
-                        <li><i class="fa-li fa fa-angle-right" aria-hidden="true"></i><p>{{ blurb }}</p></li>
-                    {% endfor %}
-                </ul>
+                {% if experience.tech || experience.description %}
+                    <div class="more-details-section">
+                        <button class="more-details-button" data-id="{{experience.id}}">
+                            <i class="fa fa-caret-right active" aria-hidden="true"></i>
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            Details
+                        </button>
+                        <div class="more-details-container" id="{{experience.id}}">
+                            <ul class="fa-ul">
+                                {% if experience.tech %}
+                                    <li>
+                                        <i class="fa-li fa fa-code" aria-hidden="true"></i><p><span class="tech-used">Technologies used:</span> {{ experience.tech }}</p>
+                                    </li>
+                                {% endif %}
+                                {% for blurb in experience.description %}
+                                    <li><i class="fa-li fa fa-angle-right" aria-hidden="true"></i><p>{{ blurb }}</p></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         {% endfor %}
     </div>

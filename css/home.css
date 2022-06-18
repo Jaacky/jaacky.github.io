@@ -322,6 +322,33 @@ p {
     font-family: Enriqueta;
 }
 
+.more-details-section {
+    text-align: left;
+}
+
+.more-details-button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: steelblue;
+}
+
+.fa-caret-down, .fa-caret-right {
+    display: none;
+}
+
+.fa-caret-down.active , .fa-caret-right.active {
+    display: inline-block;
+}
+
+.more-details-container {
+    display: none;
+}
+
+.more-details-container.active {
+    display: block;
+}
+
 @media (min-width: 768px) {
     #landing {
         height: 100vh;
